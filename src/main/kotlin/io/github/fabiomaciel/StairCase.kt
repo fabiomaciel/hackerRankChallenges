@@ -5,9 +5,15 @@ import java.util.*
 
 // Complete the staircase function below.
 fun staircase(n: Int): Unit {
+    print(stairCaseLogic(n))
+}
+
+fun stairCaseLogic(n: Int) : String{
+    var result = ""
     for(i in 1..n){
-        println("${NCharacters(" ",n - i)}${NCharacters("#",i)}")
+        result += "${NCharacters(" ",n - i)}${NCharacters("#",i)}"
     }
+    return result
 }
 
 fun NCharacters(str: String, n: Int): String{
