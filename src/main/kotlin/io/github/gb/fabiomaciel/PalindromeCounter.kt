@@ -10,23 +10,20 @@ package io.github.gb.fabiomaciel
 fun countPalindromes(s: String): Int {
     var count = s.length;
     for(start in 0 .. s.length-2) {
-        val substr = s.substring(start, start+2)
-        if(isPalindrome(substr)) count++
+        if(isPalindrome(s, start, 2)) count++
     }
 
     for(size in 3 .. s.length) {
         for (start in 0..s.length - size) {
-            val substr = s.substring(start, start+size)
-            if(isPalindrome(substr)) count++
+            if(isPalindrome(s, start, size)) count++
         }
     }
-
     return count
 }
 
-fun isPalindrome(str: String) : Boolean{
-    for(i in 0 until str.length/2){
-        if(str[i] != str[str.length-(i+1)]) return false
+fun isPalindrome(str: String, start: Int, size: Int) : Boolean{
+    for(i in 0 until size/2){
+        if(str[i+start] != str[start+size-(i+1)]) return false
     }
     return true
 }
