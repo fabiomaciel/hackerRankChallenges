@@ -28,7 +28,7 @@ fun isPalindrome(str: String, start: Int, size: Int) : Boolean{
     return true
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val s = readLine()!!
 
     val result = countPalindromes(s)
