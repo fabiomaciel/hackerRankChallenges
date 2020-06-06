@@ -37,9 +37,10 @@ INSERT INTO acceptor (did, name, gender, city, bg, amount) VALUES
 -- f, a-, 1
 -- f, ab+, 2
 
-select gender, bg, count(*) from
-    (SELECT did, gender, bg FROM donor
-     UNION
-     SELECT did, gender, bg FROM acceptor) everyone
-group by gender, bg
-order by gender, bg
+select gender, bg, count(*) from(
+    SELECT did, gender, bg FROM donor
+    UNION
+    SELECT did, gender, bg FROM acceptor
+) everyone
+    group by gender, bg
+    order by gender, bg
