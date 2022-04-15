@@ -12,7 +12,7 @@ public class LeftTreeView1 {
                 .insert(10)
                 .insert(9)
                 .insert(11);
-        LeftTreeView2 leftTreeView = new LeftTreeView2();
+        LeftTreeView1 leftTreeView = new LeftTreeView1();
         leftTreeView.leftView(tree);
     }
 
