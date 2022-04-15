@@ -22,7 +22,7 @@ public class AroundTreeView {
     public void leftView(Node root) {
         Stack<Integer> stack = new Stack<>();
         leftView(root, 0, stack);
-        while (!stack.empty()){
+        while (!stack.empty()) {
             System.out.printf(" %d", stack.pop());
         }
         System.out.printf(" %d", root.data);

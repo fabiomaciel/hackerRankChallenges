@@ -1,4 +1,4 @@
-package io.github.fabimaciel;
+package io.github.fabimaciel.hackerrank;
 
 import java.io.*;
 import java.util.LinkedList;

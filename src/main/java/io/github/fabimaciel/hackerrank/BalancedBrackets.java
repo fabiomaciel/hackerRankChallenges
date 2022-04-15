@@ -1,4 +1,4 @@
-package io.github.fabimaciel;
+package io.github.fabimaciel.hackerrank;
 
 import java.util.Arrays;
 import java.util.List;
@@ -34,16 +34,13 @@ public class BalancedBrackets {
             if (open.contains(input.charAt(i))) {
                 openList.push(input.charAt(i));
             } else {
-                if (openList.size() < 1 || open.indexOf(openList.pop()) != close.indexOf(input.charAt(i))) {
+                if (openList.isEmpty() || open.indexOf(openList.pop()) != close.indexOf(input.charAt(i))) {
                     return false;
                 }
             }
         }
 
-        if (openList.size() > 0)
-            return false;
-
-        return true;
+        return openList.isEmpty();
     }
 
 }

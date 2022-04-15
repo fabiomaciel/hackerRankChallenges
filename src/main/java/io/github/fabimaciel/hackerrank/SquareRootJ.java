@@ -1,4 +1,4 @@
-package io.github.fabimaciel;
+package io.github.fabimaciel.hackerrank;
 
 public class SquareRootJ {
     public static double getSquares(int a, int b) {
